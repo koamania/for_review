@@ -26,7 +26,7 @@ class UserApiControllerTest {
     @DisplayName("joinUser : 회원 가입 성공")
     public void joinUser() throws Exception {
         // given
-        UserEntity entity = new UserEntity(1L, "password", "nickname", "name", "010-1234-5678", "1@naver.com", LocalDateTime.now());
+        UserEntity entity = new UserEntity(1L, "password", "nickname", "name", "010-1234-5678", "1@naver.com", LocalDateTime.now(), LocalDateTime.now());
 
         // when
         userRepository.save(entity);
@@ -42,8 +42,8 @@ class UserApiControllerTest {
     @DisplayName("selectAll : 회원 정보 조회 성공")
     public void selectAll() throws Exception {
         // given
-        UserEntity entity1 = new UserEntity(1L, "password", "nickname", "name", "010-1234-5678", "1@naver.com", LocalDateTime.now());
-        UserEntity entity2 = new UserEntity(2L, "password", "nickname", "name", "010-1234-5678", "2@naver.com", LocalDateTime.now());
+        UserEntity entity1 = new UserEntity(1L, "password", "nickname", "name", "010-1234-5678", "1@naver.com", LocalDateTime.now(), LocalDateTime.now());
+        UserEntity entity2 = new UserEntity(2L, "password", "nickname", "name", "010-1234-5678", "2@naver.com", LocalDateTime.now(), LocalDateTime.now());
 
         // when
         userRepository.save(entity1);
