@@ -1,6 +1,6 @@
-package com.user.createUser.domain.repository;
+package com.user.usermanager.domain.repository;
 
-import com.user.createUser.domain.entity.UserEntity;
+import com.user.usermanager.domain.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {

@@ -1,6 +1,6 @@
-package com.user.createUser.controller.dto;
+package com.user.usermanager.controller.dto;
 
-import com.user.createUser.domain.entity.UserEntity;
+import com.user.usermanager.domain.entity.UserEntity;
 import lombok.Getter;
 
 import java.time.LocalDateTime;

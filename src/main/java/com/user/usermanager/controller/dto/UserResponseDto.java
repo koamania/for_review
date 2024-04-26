@@ -1,4 +1,4 @@
-package com.user.createUser.controller.dto;
+package com.user.usermanager.controller.dto;
 
 import lombok.Getter;
 

@@ -1,11 +1,11 @@
-package com.user.createUser.service;
+package com.user.usermanager.service;
 
-import com.user.createUser.controller.dto.RegisterUserRequestDto;
-import com.user.createUser.controller.dto.UpdateUserRequestDto;
-import com.user.createUser.controller.dto.UserResponseDto;
-import com.user.createUser.domain.entity.UserEntity;
-import com.user.createUser.domain.repository.UserRepository;
-import com.user.createUser.utils.Encryption;
+import com.user.usermanager.controller.dto.RegisterUserRequestDto;
+import com.user.usermanager.controller.dto.UpdateUserRequestDto;
+import com.user.usermanager.controller.dto.UserResponseDto;
+import com.user.usermanager.domain.entity.UserEntity;
+import com.user.usermanager.domain.repository.UserRepository;
+import com.user.usermanager.utils.Encryption;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

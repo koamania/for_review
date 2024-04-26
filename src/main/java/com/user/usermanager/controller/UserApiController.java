@@ -1,10 +1,10 @@
-package com.user.createUser.controller;
+package com.user.usermanager.controller;
 
-import com.user.createUser.controller.dto.RegisterUserRequestDto;
-import com.user.createUser.controller.dto.UpdateUserRequestDto;
-import com.user.createUser.controller.dto.UserResponseDto;
-import com.user.createUser.domain.entity.UserEntity;
-import com.user.createUser.service.UserService;
+import com.user.usermanager.controller.dto.RegisterUserRequestDto;
+import com.user.usermanager.controller.dto.UpdateUserRequestDto;
+import com.user.usermanager.controller.dto.UserResponseDto;
+import com.user.usermanager.domain.entity.UserEntity;
+import com.user.usermanager.service.UserService;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

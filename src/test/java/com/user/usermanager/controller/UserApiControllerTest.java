@@ -1,7 +1,7 @@
-package com.user.createUser.controller;
+package com.user.usermanager.controller;
 
-import com.user.createUser.domain.entity.UserEntity;
-import com.user.createUser.domain.repository.UserRepository;
+import com.user.usermanager.domain.entity.UserEntity;
+import com.user.usermanager.domain.repository.UserRepository;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

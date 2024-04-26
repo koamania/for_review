@@ -1,4 +1,4 @@
-package com.user.createUser.utils;
+package com.user.usermanager.utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
