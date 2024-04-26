@@ -1,8 +1,10 @@
 package com.user.createUser.controller;
 
 import com.user.createUser.controller.dto.RegisterUserRequestDto;
+import com.user.createUser.controller.dto.UserResponseDto;
 import com.user.createUser.domain.entity.UserEntity;
 import com.user.createUser.service.UserService;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,5 +22,14 @@ public class UserApiController {
 
         userService.joinUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    @GetMapping("/api/user/list")
+    public ResponseEntity<Page<UserResponseDto>> getUsers(@RequestParam(required = false, defaultValue = "1") int page,
+                                                          @RequestParam(required = false, defaultValue = "5") int pageSize,
+                                                          @RequestParam(required = false, defaultValue = "id") String sort) {
+        Page<UserResponseDto> paging = userService.findUsers(page, pageSize, sort);
+
+        return ResponseEntity.ok().body(paging);
     }
 }
