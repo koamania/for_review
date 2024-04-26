@@ -14,7 +14,7 @@ public class RegisterUserRequestDto {
     private String email;
 
     public UserEntity toEntity(){
-        return new UserEntity(null, password, nickname, name, phone, email, LocalDateTime.now());
+        return new UserEntity(null, password, nickname, name, phone, email, LocalDateTime.now(), LocalDateTime.now());
     }
 
     public RegisterUserRequestDto(){}

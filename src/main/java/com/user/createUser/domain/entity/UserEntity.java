@@ -35,7 +35,11 @@ public class UserEntity {
     @Column(name = "created_date")
     private LocalDateTime createdDate;
 
-    public UserEntity(Long id, String password, String nickname, String name, String phone, String email, LocalDateTime createdDate) {
+    @Column(name = "update_date")
+    private LocalDateTime updateDate;
+
+
+    public UserEntity(Long id, String password, String nickname, String name, String phone, String email, LocalDateTime createdDate, LocalDateTime updateDate) {
         this.id = id;
         this.password = password;
         this.nickname = nickname;
@@ -43,9 +47,18 @@ public class UserEntity {
         this.phone = phone;
         this.email = email;
         this.createdDate = createdDate;
+        this.updateDate = updateDate;
     }
 
     public void encryptedPwd(String hashedPwd){
         this.password = hashedPwd;
+    }
+
+    public void update(String password, String nickname, String name, String phone) {
+        this.password = password;
+        this.nickname = nickname;
+        this.name = name;
+        this.phone = phone;
+        this.updateDate = LocalDateTime.now();
     }
 }

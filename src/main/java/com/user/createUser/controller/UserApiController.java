@@ -1,6 +1,7 @@
 package com.user.createUser.controller;
 
 import com.user.createUser.controller.dto.RegisterUserRequestDto;
+import com.user.createUser.controller.dto.UpdateUserRequestDto;
 import com.user.createUser.controller.dto.UserResponseDto;
 import com.user.createUser.domain.entity.UserEntity;
 import com.user.createUser.service.UserService;
@@ -34,5 +35,15 @@ public class UserApiController {
         Page<UserResponseDto> paging = userService.findUsers(page, pageSize, sort);
 
         return ResponseEntity.ok().body(paging);
+    }
+
+    @PutMapping("/api/user/{id}")
+    public ResponseEntity<?> updateUser(@PathVariable long id, @RequestBody UpdateUserRequestDto updateUserRequestDto) {
+        try {
+            UserEntity update = userService.update(id, updateUserRequestDto);
+            return ResponseEntity.ok().body(update);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 }
