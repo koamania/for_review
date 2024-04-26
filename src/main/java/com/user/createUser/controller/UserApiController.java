@@ -18,10 +18,13 @@ public class UserApiController {
     }
 
     @PostMapping("/api/user/join")
-    public ResponseEntity<UserEntity> joinUser(@RequestBody RegisterUserRequestDto user) {
-
-        userService.joinUser(user);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+    public ResponseEntity<String> joinUser(@RequestBody RegisterUserRequestDto user) {
+        try {
+            userService.joinUser(user);
+            return ResponseEntity.status(HttpStatus.CREATED).build();
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @GetMapping("/api/user/list")

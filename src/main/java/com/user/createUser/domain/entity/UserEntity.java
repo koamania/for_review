@@ -44,4 +44,8 @@ public class UserEntity {
         this.email = email;
         this.createdDate = createdDate;
     }
+
+    public void encryptedPwd(String hashedPwd){
+        this.password = hashedPwd;
+    }
 }
